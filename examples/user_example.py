@@ -13,9 +13,9 @@ async def user_example():
         user = api.user("therock")
         user_data = await user.info()
         print(user_data)
+        videoCount = user_data['userInfo']['stats']['videoCount']
 
-        async for video in user.videos(count=30):
-            print(video)
+        async for video in user.videos(count=videoCount):
             print(video.as_dict)
 
 
