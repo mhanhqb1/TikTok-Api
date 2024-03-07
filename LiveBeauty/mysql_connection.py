@@ -1,7 +1,7 @@
 import os
 import mysql.connector
 from mysql.connector import Error
-from configs import cfg
+from LiveBeauty.configs import cfg
 cfg.run()
 user = os.environ.get('DB_USERNAME')
 password = os.environ.get('DB_PASSWORD')
